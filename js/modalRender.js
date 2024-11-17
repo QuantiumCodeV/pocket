@@ -20,6 +20,8 @@ div.innerHTML = `
 body.appendChild(div);
 
 function openModal() {
+  
+  
   const modal = document.getElementById("modal");
 
   const activeModal = document.querySelector(".modal-visible");
@@ -153,7 +155,7 @@ function load() {
   const loadCheck = setInterval(() => {
     if (
       document.querySelector(".downloadandroid") &&
-      document.querySelector(".downloadios")
+      document.querySelector(".downloadios")  && document.querySelector("#joinNowButton")
     ) {
       clearInterval(loadCheck);
 
@@ -167,6 +169,15 @@ function load() {
       [...document.querySelectorAll(".downloadios")].map((el) => {
         el.addEventListener("click", () => {
           window.os = "mac";
+          openModal();
+        });
+      });
+
+      [...document.querySelectorAll("#joinNowButton")].map((el) => {
+        el.addEventListener("click", () => {
+          // Определяем операционную систему
+          const isMac = /Mac|iPhone|iPad/.test(navigator.userAgent);
+          window.os = isMac ? "mac" : "win";
           openModal();
         });
       });
