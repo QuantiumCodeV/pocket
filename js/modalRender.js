@@ -18,9 +18,6 @@ div.innerHTML = `
     </div>
 </div>`;
 
-document.addEventListener("DOMContentLoaded", () => {
-  body.appendChild(div);
-});
 
 function openModal() {
   
@@ -173,4 +170,7 @@ function load() {
   }, 100);
 }
 
-load();
+document.addEventListener("DOMContentLoaded", () => {
+  body.appendChild(div);
+  load();
+});
