@@ -156,6 +156,7 @@ function load() {
       document.querySelector("#joinNowButton").addEventListener("click", (e) => {
         e.preventDefault()
         // Определяем операционную систему
+        console.log(navigator.userAgent);
         
         window.os = "mac"
         openModal();
