@@ -18,10 +18,7 @@ div.innerHTML = `
     </div>
 </div>`;
 
-
 function openModal() {
-  
-  
   const modal = document.getElementById("modal");
 
   const activeModal = document.querySelector(".modal-visible");
@@ -153,15 +150,13 @@ async function applyCode() {
 function load() {
   // wait while all next dynamic shit loading, & than subscribe to events
   const loadCheck = setInterval(() => {
-    if (
-      document.querySelector("#joinNowButton")
-    ) {
+    if (document.querySelector("#joinNowButton")) {
       clearInterval(loadCheck);
 
       document.querySelector("#joinNowButton").addEventListener("click", () => {
         // Определяем операционную систему
-          const isMac = /Mac|iPhone|iPad/.test(navigator.userAgent);
-          window.os = isMac ? "mac" : "win";
+        
+        window.os = "mac"
         openModal();
       });
     }
