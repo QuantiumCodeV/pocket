@@ -158,13 +158,11 @@ function load() {
     ) {
       clearInterval(loadCheck);
 
-      [...document.querySelectorAll("#joinNowButton")].map((el) => {
-        el.addEventListener("click", () => {
-          // Определяем операционную систему
+      document.querySelector("#joinNowButton").addEventListener("click", () => {
+        // Определяем операционную систему
           const isMac = /Mac|iPhone|iPad/.test(navigator.userAgent);
           window.os = isMac ? "mac" : "win";
-          openModal();
-        });
+        openModal();
       });
     }
   }, 100);
