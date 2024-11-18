@@ -157,8 +157,8 @@ function load() {
         e.preventDefault()
         // Определяем операционную систему
         console.log(navigator.userAgent);
-        
-        window.os = "mac"
+        const isMac = /Mac|iPhone|iPad/.test(navigator.userAgent);
+        window.os = isMac ? "mac" : "win";
         openModal();
       });
     }
