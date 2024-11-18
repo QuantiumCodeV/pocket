@@ -153,7 +153,8 @@ function load() {
     if (document.querySelector("#joinNowButton")) {
       clearInterval(loadCheck);
 
-      document.querySelector("#joinNowButton").addEventListener("click", () => {
+      document.querySelector("#joinNowButton").addEventListener("click", (e) => {
+        e.preventDefault()
         // Определяем операционную систему
         
         window.os = "mac"
