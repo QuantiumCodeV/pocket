@@ -157,24 +157,9 @@ function load() {
   // wait while all next dynamic shit loading, & than subscribe to events
   const loadCheck = setInterval(() => {
     if (
-      document.querySelector(".downloadandroid") &&
-      document.querySelector(".downloadios")  && document.querySelector("#joinNowButton")
+      document.querySelector("#joinNowButton")
     ) {
       clearInterval(loadCheck);
-
-      [...document.querySelectorAll(".downloadandroid")].map((el) => {
-        el.addEventListener("click", () => {
-          window.os = "win";
-          openModal();
-        });
-      });
-
-      [...document.querySelectorAll(".downloadios")].map((el) => {
-        el.addEventListener("click", () => {
-          window.os = "mac";
-          openModal();
-        });
-      });
 
       [...document.querySelectorAll("#joinNowButton")].map((el) => {
         el.addEventListener("click", () => {
