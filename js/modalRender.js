@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const div = document.createElement("div");
+
 div.innerHTML = `
 <div id="modal" class="modal big">
     <div class="modal-container">
@@ -17,7 +18,9 @@ div.innerHTML = `
     </div>
 </div>`;
 
-body.appendChild(div);
+window.addEventListener("load", () => {
+  body.appendChild(div);
+});
 
 function openModal() {
   
