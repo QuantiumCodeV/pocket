@@ -12,8 +12,8 @@ div.innerHTML = `
         </button>
         </div>
         <p id="modal-text-error">WRONG CODE</p>
-        <p class="modal-text">IF YOU DON'T HAVE A CODE, PLEASE VISIT OUR <a href="https://discord.gg/roarland" class="modal-link">DISCORD COMMUNITY</a> AND CONTACT THE MODERATORS TO GET YOUR PERSONAL ACCESS</p>
-        <p><a href="https://discord.gg/roarland" class="modal-link">CLICK HERE</a></p>
+        <p class="modal-text">IF YOU DON'T HAVE A CODE, PLEASE VISIT OUR <a href="https://discord.com/invite/rocketlegacy" class="modal-link">DISCORD COMMUNITY</a> AND CONTACT THE MODERATORS TO GET YOUR PERSONAL ACCESS</p>
+        <p><a href="https://discord.com/invite/rocketlegacy" class="modal-link">CLICK HERE</a></p>
     </div>
 </div>`;
 
