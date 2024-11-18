@@ -18,7 +18,7 @@ div.innerHTML = `
     </div>
 </div>`;
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   body.appendChild(div);
 });
 
